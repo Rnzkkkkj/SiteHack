@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página de Registro</title>
+  <link rel="stylesheet" href="register_style.css">
+</head>
+<body>
+  <div class="register-container">
+    <h2>Registrar-se</h2>
+    <form id="registerForm" action="#" method="POST">
+      <div class="input-group">
+        <input type="text" name="username" placeholder="Usuário" required>
+      </div>
+      <div class="input-group">
+        <input type="email" name="email" placeholder="E-mail" required>
+      </div>
+      <div class="input-group">
+        <input type="password" name="password" placeholder="Senha" required>
+      </div>
+      <div class="input-group">
+        <input type="password" name="confirm_password" placeholder="Confirme a Senha" required>
+      </div>
+      <button type="submit">Registrar</button>
+      <div class="links">
+        <a href="login.html">Já tem uma conta? Faça login</a>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('registerForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Impede o envio padrão do formulário
+
+      const username = event.target.username.value; // Obtém o nome de usuário
+      const email = event.target.email.value; // Obtém o email
+      const password = event.target.password.value; // Obtém a senha
+      const confirmPassword = event.target.confirm_password.value; // Obtém a confirmação da senha
+
+      // Validação simples da senha
+      if (password !== confirmPassword) {
+        alert('As senhas não coincidem. Tente novamente.');
+        return;
+      }
+
+      // Armazenando os dados no localStorage (apenas para fins de exemplo)
+      localStorage.setItem('username', username);
+      localStorage.setItem('email', email);
+      
+      // Redirecionando para a página principal após o registro
+      window.location.href = 'index.html'; // Ajuste o caminho conforme necessário
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esqueci Minha Senha</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #282c34;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        form {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        input {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+        button {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            background-color: #6200ee;
+            color: white;
+            cursor: pointer;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<form id="forgotPasswordForm">
+    <h2>Esqueci Minha Senha</h2>
+    <input type="email" id="email" placeholder="Digite seu email" required>
+    <button type="submit">Enviar</button>
+</form>
+
+<script>
+    document.getElementById('forgotPasswordForm').addEventListener('submit', function(e) {
+        e.preventDefault(); // Impede o envio padrão do formulário
+        const email = document.getElementById('email').value;
+
+        // Aqui você pode simular o envio do email
+        alert(`Um email com instruções de recuperação foi enviado para ${email}`);
+        
+        // Você pode adicionar a lógica para redirecionar ou limpar o formulário
+        document.getElementById('forgotPasswordForm').reset();
+    });
+</script>
+
+</body>
+</html>

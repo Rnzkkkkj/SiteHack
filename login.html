@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página de Login</title>
+  <link rel="stylesheet" href="login_style.css">
+</head>
+<body>
+  <div class="login-container">
+    <h2>Login</h2>
+    <form id="loginForm" action="#">
+      <div class="input-group">
+        <input type="text" name="username" placeholder="Usuário" required>
+      </div>
+      <div class="input-group">
+        <input type="password" name="password" placeholder="Senha" required>
+      </div>
+      <button type="submit">Entrar</button>
+      <div class="links">
+        <a href="register.html">Não tem uma conta? Registre-se</a>
+      </div>
+    </form>
+
+    <script>
+      document.getElementById('loginForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Impede o envio do formulário
+        // Aqui você pode adicionar lógica para autenticar o usuário
+
+        // Redireciona para o site principal após o login
+        window.location.href = 'index.html';
+      });
+    </script>
+  </div>
+</body>
+</html>

@@ -1,0 +1,98 @@
+/* Estilos básicos e layout */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4; /* Fundo leve */
+}
+
+.container {
+    max-width: 960px; /* Largura máxima do container */
+    margin: 0 auto; /* Centraliza o container */
+    padding: 0 20px; /* Adiciona padding lateral */
+}
+
+/* Estilos para o cabeçalho */
+header {
+    text-align: center;
+    padding: 40px 0;
+    background-color: #333; /* Fundo escuro */
+    color: #fff; /* Texto branco */
+}
+
+.btn, .btn-secondary {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff; /* Azul */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover, .btn-secondary:hover {
+    background-color: #0056b3; /* Azul mais escuro */
+}
+
+/* Estilos para a seção "Sobre Nós" */
+#sobre-nos {
+    padding: 40px 0;
+}
+
+.valores {
+    display: flex;
+    justify-content: space-around; /* Distribui os valores igualmente */
+    margin-top: 30px;
+}
+
+.valor {
+    text-align: center;
+}
+
+.valor i {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+/* Estilos para a seção "Nossos Serviços" */
+#nossos-servicos {
+    padding: 40px 0;
+    background-color: #f0f0f0; 
+}
+
+.servicos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Cria um grid responsivo */
+    gap: 20px; /* Espaçamento entre os serviços */
+}
+
+.servico {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: white; /* Fundo branco para os serviços */
+}
+
+/* Estilos para o rodapé */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333; 
+    color: white;
+}
+
+footer nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+footer nav ul li a {
+    color: white;
+    text-decoration: none;
+}
